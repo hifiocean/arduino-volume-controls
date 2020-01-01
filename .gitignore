@@ -1,6 +1,1 @@
-.json
-PGA2310/.vscode/arduino.json
-PGA2310/.vscode/launch.json
-WM8816/.vscode/arduino.json
-WM8816/.vscode/launch.json
-WM8816/.vscode/c_cpp_properties.json
+*.json
