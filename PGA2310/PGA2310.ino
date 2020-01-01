@@ -43,7 +43,7 @@
  *   Encoder - to digital pins 2 and 4, common - to pin 3
  *
  * created 22 Jul 2018
- * by alexcp
+ * by Alexey Khudyakov
  *
  */
 
