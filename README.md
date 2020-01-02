@@ -8,4 +8,4 @@ Example Arduino sketches interfacing the following digital volume controls over 
 
 The sketches have minimal functionality and, while useful, are not meant to be production code.
 
-The sketched depend on the Encoder library (https://www.pjrc.com/teensy/td_libs_Encoder.html) for interfacing an incremental rotary encoder and on Adafruit_LiquidCrystal for using the I2C backpack for 2x16 character LCD.
+The sketches depend on the Encoder library (https://www.pjrc.com/teensy/td_libs_Encoder.html) for interfacing an incremental rotary encoder and on Adafruit_LiquidCrystal for using the I2C backpack for 2x16 character LCD.
