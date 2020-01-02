@@ -94,7 +94,7 @@ void displayVolume() {
 }
 
 void ds1882write(int8_t ch0, int8_t ch1) {
-  // update the potentiometers of DS1882
+  // update potentiometers
   Wire.beginTransmission(ds1882Addr);
   Wire.write((ch0 & bmValue) | regPot0); // Pot 0
   Wire.write((ch1 & bmValue) | regPot1); // Pot 1
@@ -114,7 +114,7 @@ int8_t ds1882init() {
   // dsState[0] = Pot0 value, dsState[1] = Pot1 value, dsState[2] = configuration
 
   if (dsState[2] != ds1882Conf) {
-    // if the configuration is not what it should be, so we send the right one
+    // the configuration is not what it should be, so we send the right one
     Wire.beginTransmission(ds1882Addr);
     Wire.write(ds1882Conf | regConfig);
     Wire.endTransmission();
