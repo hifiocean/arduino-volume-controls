@@ -1,5 +1,5 @@
 /*
- * Digital Volume Control with NJR MUSES72302 - an example
+ * Digital Volume Control with NJR c - an example
  * 
  * This is free and unencumbered software released into the public domain.
  * 
@@ -26,17 +26,17 @@
  * 
  * For more information, please refer to <https://unlicense.org>
  * 
- * The MUSES72302 is SPI MODE 0(?) compatible. To control it, 
+ * The MUSES72320 is SPI MODE 0 compatible. To control it, 
  * send two bytes, first with the control data (gain, etc.),
  * second with the pair of register/chip addresses.
  * 
  * The connections:
- *   DREF   (MUSES72302 pin 21) - to Arduino's GND via a 10kOhm resistor
- *   DVDD   (MUSES72302 pin 17) - to +5V via a 10kOhm resistor
- *   CLOCK  (MUSES72302 pin 19) - to digital pin 13 (SCK pin)
- *   DATA   (MUSES72302 pin 18) - to digital pin 11 (MOSI pin)
- *   LATCH  (MUSES72302 pin 20) - to digital pin 10 (SS pin)
- *   /ZCEN  (MUSES72302 pin 32) - to digital pin  8
+ *   DREF   (MUSES72320 pin 21) - to Arduino's GND via a 10kOhm resistor
+ *   DVDD   (MUSES72320 pin 17) - to +5V via a 10kOhm resistor
+ *   CLOCK  (MUSES72320 pin 19) - to digital pin 13 (SCK pin)
+ *   DATA   (MUSES72320 pin 18) - to digital pin 11 (MOSI pin)
+ *   LATCH  (MUSES72320 pin 20) - to digital pin 10 (SS pin)
+ *   /ZCEN  (MUSES72320 pin 32) - to digital pin  8
  *   Encoder - to digital pins 2 and 4, common - to pin 3
  * 
  *  created 03 Aug 2018
@@ -52,7 +52,7 @@
 const uint8_t musesChipAddress = 0;
 
 // SPI pins are set by the SPI peripheral and cannot be changed
-// define zcenb and csb pins for the MUSES72302
+// define zcenb and csb pins for the MUSES72320
 const int zcenPin = 8;  // zero crossing enable, active low
 const int csbPin = 10;  // chip select, active low
 // define encoder pins
@@ -70,7 +70,7 @@ const long maxVolume = 63L;      // = +31.5 dB
 Encoder myEncoder(encoderPinA, encoderPinB);
 long oldVolume = defaultVolume;
 
-// MUSES72302 register addresses
+// MUSES72320 register addresses
 // Each register is 16 bit
 // Bits 15..8 contain the data (volume setting or control bits)
 // Bits 7..4 are register address
