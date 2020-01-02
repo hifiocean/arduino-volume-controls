@@ -54,7 +54,6 @@
 #include "Adafruit_LiquidCrystal.h" 
 
 // include the Encoder library:
-#define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Encoder.h>
 
 // define encoder pins
