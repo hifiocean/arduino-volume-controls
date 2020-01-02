@@ -40,7 +40,7 @@
  *   
  * Encoder connections:
  *   Pin A  - to Arduino pin 2 
- *   Pin B  - to Arduino pin 3 
+ *   Pin B  - to Arduino pin 4 
  *   Common - to digital pin 3 (or to GND)
  *   Note: Neither A0 not A1 have pin change interrupt capability,
  *   and it degrades the performance of the Encoder library.  
