@@ -42,11 +42,6 @@
  *   Pin A  - to Arduino pin 2 
  *   Pin B  - to Arduino pin 4 
  *   Common - to digital pin 3 (or to GND)
- *   Note: Neither A0 not A1 have pin change interrupt capability,
- *   and it degrades the performance of the Encoder library.  
- *   While it works for this example, for a real application 
- *   consider moving the encoder pins to digital pins 2 or 3.
- *   See the details here: https://www.pjrc.com/teensy/td_libs_Encoder.html
  *
  * created 31 Dec 2019
  * by Alexey Khudyakov
